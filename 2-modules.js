@@ -1,7 +1,7 @@
  // CommonJS, every file is a module (by default)
 // console.log(module)
 
-console.log("Inside module file")
+console.log("Inside module file got it")
 const fun1=()=>{
     console.log(`Hello via fun1`)
 }
@@ -14,7 +14,7 @@ let fun3=()=>{
 const def=()=>{
     console.log("Default fun called");
 }
-var num=90;
+var num=9023;
 module.exports={
     fun1,num23:num,
     fun2,def,fun3
