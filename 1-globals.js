@@ -34,3 +34,5 @@ var id=setInterval(()=>{
         clearInterval(id);
     }
 },num)
+
+

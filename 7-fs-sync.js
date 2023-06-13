@@ -1,4 +1,4 @@
-  const {readFileSync, writeFileSync} =require("fs");
+const {readFileSync, writeFileSync} =require("fs");
   
 const file1Data=readFileSync('./content/first.txt',{ encoding: 'utf8', flag: 'r' });
 const file2Data=readFileSync('./content/second.txt',{ encoding: 'utf8', flag: 'r' });

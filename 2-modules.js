@@ -14,10 +14,14 @@ let fun3=()=>{
 const def=()=>{
     console.log("Default fun called");
 }
-var num=9023;
+const num567=9023;
+// console.log(module.exports)
 module.exports={
-    fun1,num23:num,
+    fun1,num567:89,
     fun2,def,fun3
 };
 
+// console.log(module.exports)
+console.log("between")
+// console.log(module)
 // module.exports=def;

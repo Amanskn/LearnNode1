@@ -3,6 +3,7 @@ var os=require("os");
 // destructuring a particular method from os modules
 var {version}=require('os');
 
+console.log("This is the OS Version :-",version())
 // info about current user
 console.log(os.userInfo());
 
