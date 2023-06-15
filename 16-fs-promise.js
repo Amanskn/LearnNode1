@@ -13,7 +13,7 @@ const start= async ()=>{
     try {
         const first = await  readFile('./content/first.txt','utf8');
         const second = await  readFile('./content/second.txt','utf8');
-         await writeFile('./content/madeByFs-promise-Write.txt',` This is the data being wriiten recently via writeFilePromise:- ${first}, ${second}`);
+         await writeFile('./content/madeByFs-promise-Write.txt',` This is the data being wriiten recently via writeFilePromise:- ${first}, ${second}`,{flag:'w'});
         const recentData = await  readFile('./content/madeBy-Write.txt','utf8');
         console.log("Reading done via fs.promises for first file:- ",first);
         console.log("Reading done via fs.promises for second file :- ",second);
