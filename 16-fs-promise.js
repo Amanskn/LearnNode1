@@ -1,8 +1,8 @@
-const { readFile,writeFile }=require('fs');
+const { readFile,writeFile }=require('fs').promises;
 
-const util =require('util');
-const readFilePromise = util.promisify(readFile);
-const writeFilePromise = util.promisify(writeFile);
+// const util =require('util');
+// const readFilePromise = util.promisify(readFile);
+// const writeFilePromise = util.promisify(writeFile);
 
 
 
@@ -11,12 +11,12 @@ const writeFilePromise = util.promisify(writeFile);
 // ----------------------------reading via async/await stylings
 const start= async ()=>{
     try {
-        const first = await  readFilePromise('./content/first.txt','utf8');
-        const second = await  readFilePromise('./content/second.txt','utf8');
-         await writeFilePromise('./content/madeBy-Write.txt',` This is the data being wriiten recently via writeFilePromise:- ${first}, ${second}`);
-        const recentData = await  readFilePromise('./content/madeBy-Write.txt','utf8');
-        console.log("Reading done via util.promisify for first file:- ",first);
-        console.log("Reading done via util.promisify for second file :- ",second);
+        const first = await  readFile('./content/first.txt','utf8');
+        const second = await  readFile('./content/second.txt','utf8');
+         await writeFile('./content/madeByFs-promise-Write.txt',` This is the data being wriiten recently via writeFilePromise:- ${first}, ${second}`);
+        const recentData = await  readFile('./content/madeBy-Write.txt','utf8');
+        console.log("Reading done via fs.promises for first file:- ",first);
+        console.log("Reading done via fs.promises for second file :- ",second);
         console.log("focus on this:-",recentData)
         
     } catch (error) {

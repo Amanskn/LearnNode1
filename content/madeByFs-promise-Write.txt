@@ -1,0 +1,1 @@
+ This is the data being wriiten recently via writeFilePromise:- Hello this is first text file, Hello this is second text file
