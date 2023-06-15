@@ -17,7 +17,6 @@ const getText=(path)=>{
 const result=getText('./content/second.txt');
 console.log("This is the result of getText:-",result);
 
-// ---------------------------reading via promises
 result
 .then((data)=>{
     console.log("This is the actual content being read:-",data);
@@ -26,20 +25,5 @@ result
     console.log("There came an error and the error is :-",err);
 })
 
-console.log("Done with promise")
 
-// ----------------------------reading via async/await stylings
-const start= async ()=>{
-    try {
-        const first = await  getText('./content/first.txt');
-        const second = await  getText('./content/second.txt');
-        console.log("This is reading via async-await styling :- ",first);
-        console.log("This is reading via async-await styling :- ",second);
-        
-    } catch (error) {
-        console.log("Inside catch and the error is :-",error)    
-        return ;
-    }
-}
-start();
 
